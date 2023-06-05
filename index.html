@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css"> 
+    <title>Harmony</title>
+</head>
+<body>
+   <div class="container">
+    <div class="fixedRow">
+        <button class="button-89" role="button" onclick="homeClick()">
+            Home 
+        </button>
+        <button class="button-89" role="button" onclick="perFlower()">
+            Per 
+        </button>
+        <button class="button-89" role="button" onclick="bouquetFlower()">
+            Bouquet 
+        </button>
+        <button class="button-89" role="button" onclick="bowlFlower()">
+            Bowl 
+        </button>
+     </div>
+        <div class="pageContent">
+            <div class="header">
+                <div class="flowery">Harmony
+                </div>
+                    <div class="group">      
+                      <input type="text" required id="myInput"/>
+                      <span class="highlight"></span>
+                      <span class="bar"></span>
+                      <label>Searching flower by name</label>
+                    </div>
+                <div id="root">
+                    <button class="button-86" role="button" onclick="searchButton()">
+                    Search
+                    </button>
+                </div>
+            </div>
+            <div id="content"></div>
+        </div>
+   </div>
+   <script src="./index.js"></script>
+</body>
+</html>

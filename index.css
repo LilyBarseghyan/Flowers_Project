@@ -1,0 +1,382 @@
+
+body {
+    margin: 0;    
+}
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: fit-content;    
+}
+
+.fixedRow {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    padding-top: 15px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    z-index: 1;   
+}
+
+.button-89 {
+  --b: 3px; 
+  --s: .45em;
+  --color: white;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid white;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
+    
+}
+.header {
+    padding: 30px 0 15px 0;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 10px;
+}
+
+
+
+
+.group 			  { 
+    position:relative; 
+
+  }
+  input 				{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+    margin-top: 10px;
+  }
+  input:focus { 
+    outline:none;
+  }
+  
+  label {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:20px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:20px;
+    color:#ffffff;
+  }
+
+  .bar 	{ position:relative; display:block; width:300px; }
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+
+.button-86 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-86::after,
+  .button-86::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+  }
+  
+  .button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #553c9a, #b393d3);
+    border-radius: 10px;
+  }
+  
+  .button-86::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+  
+  .button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+  
+  .button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button-86:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
+
+#content {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10%;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: fit-content;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 310px;
+    padding: 20px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+
+}
+
+.userImg {
+    height: 400px;
+    width: fit-content;
+
+}
+.flowerName {
+    color: rgb(0, 0, 59);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.fade {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+    background-color: rgba(0, 0, 0, 0.343);
+}
+
+.modal {
+    color: black;
+    background-color: rgb(245, 238, 238);
+    width: 40%;
+    block-size: fit-content;
+    height: fit-content;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px; 
+}
+
+.modal:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+button {
+    font-size: 20px;
+}
+.eachCard {
+width: 300px;
+padding: 15px;
+display: flex;
+flex-direction: column;
+align-items: center;
+box-sizing: border-box;
+}
+
+.flower {
+    width: 200px;
+}
+
+.eachCard:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+div.eachCard {
+    width: 400px;
+    height: fit-content;
+    background-color: #b393d324;
+}
+
+.imageSize {
+    height: 250px;
+   margin: 0px 20px 0px 20px;
+}
+.colums {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#closeButton {
+    position: relative;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: bold;
+    width: max-content;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.bigContent {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+}
+.flowery{
+    font-style: italic;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
